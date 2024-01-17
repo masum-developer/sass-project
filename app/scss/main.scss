@@ -1,0 +1,21 @@
+@forward "./base/index";
+@use "./util/index" as variable;
+header {
+  background-color: variable.$header_bg;
+  padding: 1.5rem;
+}
+@mixin para-style($size, $style) {
+  font-size: $size;
+  text-align: $style;
+  margin: 10px 0;
+}
+main {
+  background-color: variable.$main_bg;
+  padding: 1.5rem;
+}
+#about p {
+  @include para-style(20px, justify);
+}
+#education p {
+  @include para-style(16px, left);
+}
